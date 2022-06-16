@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ogSMyQ+Y3LoJ8im/l2XF+k5hjoBsmbGuJqABqk9ZKVFI/zbAiAXBBPWRfJgdqfcr1sPDUlqdiGxyqJo5nC/3yA==",
+  "dgSpecHash": "eDkTt5W+dnZuwfcilBkS4dcjWBycY+QjnGU6VpBvp0mlOQQ3B8e+GS+YQVTzyMp/zOwPom1aUttREoNq9M6RzQ==",
   "success": true,
   "projectFilePath": "/home/caesar/RiderProjects/DatingApp/API/API.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "/home/caesar/.nuget/packages/microsoft.entityframeworkcore.sqlite/6.0.6/microsoft.entityframeworkcore.sqlite.6.0.6.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/6.0.6/microsoft.entityframeworkcore.sqlite.core.6.0.6.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.entityframeworkcore.sqlserver/6.0.6/microsoft.entityframeworkcore.sqlserver.6.0.6.nupkg.sha512",
+    "/home/caesar/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.6/microsoft.entityframeworkcore.tools.6.0.6.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
