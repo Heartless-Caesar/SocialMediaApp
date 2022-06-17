@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppContextDb>(options =>
 });
 /* ----------------------------------------------- */
 
+/* ----- Adding a CORS Policy to be used in app.UseCors as an argument ----- */
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "SpecificOrigins", policy =>
@@ -26,6 +27,7 @@ builder.Services.AddCors(options =>
             
         });
 });
+/* ------------------------------------------------------------------------- */
 
 var app = builder.Build();
 
@@ -43,7 +45,6 @@ app.UseRouting();
 app.UseCors("SpecificOrigins");
 
 app.UseAuthorization();
-
 
 app.MapControllers();
 
