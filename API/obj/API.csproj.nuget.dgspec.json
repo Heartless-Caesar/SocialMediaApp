@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/caesar/RiderProjects/DatingApp/API/API.csproj": {}
+    "/home/caesar/Dotnet_Projects/DatingApp/API/API.csproj": {}
   },
   "projects": {
-    "/home/caesar/RiderProjects/DatingApp/API/API.csproj": {
+    "/home/caesar/Dotnet_Projects/DatingApp/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/caesar/RiderProjects/DatingApp/API/API.csproj",
+        "projectUniqueName": "/home/caesar/Dotnet_Projects/DatingApp/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/caesar/RiderProjects/DatingApp/API/API.csproj",
+        "projectPath": "/home/caesar/Dotnet_Projects/DatingApp/API/API.csproj",
         "packagesPath": "/home/caesar/.nuget/packages/",
-        "outputPath": "/home/caesar/RiderProjects/DatingApp/API/obj/",
+        "outputPath": "/home/caesar/Dotnet_Projects/DatingApp/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/caesar/.nuget/NuGet/NuGet.Config"

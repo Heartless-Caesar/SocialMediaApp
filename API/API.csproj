@@ -21,4 +21,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="WeatherForecast.cs" />
+    <Compile Remove="Data\Migrations\20220616194329_InitialMigration.cs" />
+    <Compile Remove="Data\Migrations\20220616194329_InitialMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220618004025_UserUpdate.cs" />
+    <Compile Remove="Data\Migrations\20220618004025_UserUpdate.Designer.cs" />
+    <Compile Remove="Data\Migrations\AppContextDbModelSnapshot.cs" />
+  </ItemGroup>
+
 </Project>

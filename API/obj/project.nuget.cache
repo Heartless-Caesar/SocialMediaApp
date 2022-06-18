@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eDkTt5W+dnZuwfcilBkS4dcjWBycY+QjnGU6VpBvp0mlOQQ3B8e+GS+YQVTzyMp/zOwPom1aUttREoNq9M6RzQ==",
+  "dgSpecHash": "lrnFqCUvKXFRE4m85VIhGn8OqmdMm32wNgCh9y0716KBHxfgiloVfXoMyuCst5o0OP7VTpF/RcTzsYuQiY8mow==",
   "success": true,
-  "projectFilePath": "/home/caesar/RiderProjects/DatingApp/API/API.csproj",
+  "projectFilePath": "/home/caesar/Dotnet_Projects/DatingApp/API/API.csproj",
   "expectedPackageFiles": [
     "/home/caesar/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
