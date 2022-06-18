@@ -23,6 +23,7 @@ public class AccountController : BaseApiController
         if (await UserExists(obj.Username)) return BadRequest("Username taken");
 
         using var hmac = new HMACSHA512();
+
         var user = new AppUser
         {
             Username = obj.Username.ToLower(),
@@ -49,18 +50,19 @@ public class AccountController : BaseApiController
 
         var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(obj.Password));
 
-        for (int i = 0; i < computedHash.Length; i++)
+        for (var i = 0; i < computedHash.Length; i++)
         {
             if (computedHash[i] != user.PasswordHash[i])
             {
-            return Unauthorized("Passwords do not match");
+                return Unauthorized("Passwords do not match");
             }
         }
         
         
         return user;
     }
-
+    
+    [HttpGet]
     public async Task<bool> UserExists(string username)
     {
         return await _context.Users.AnyAsync(x => x.Username == username.ToLower());

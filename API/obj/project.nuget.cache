@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lrnFqCUvKXFRE4m85VIhGn8OqmdMm32wNgCh9y0716KBHxfgiloVfXoMyuCst5o0OP7VTpF/RcTzsYuQiY8mow==",
+  "dgSpecHash": "O3VX82CoL2c4Q/WIcd+n/Cq5tQqv2Vw8zG8MowmrlYWl1h8Uxpb3gjxV2go7IEb0Rnbgttay5bVRy488v3oc4g==",
   "success": true,
-  "projectFilePath": "/home/caesar/Dotnet_Projects/DatingApp/API/API.csproj",
+  "projectFilePath": "/home/caesar/RiderProjects/SocialMediaApp/API/API.csproj",
   "expectedPackageFiles": [
     "/home/caesar/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
