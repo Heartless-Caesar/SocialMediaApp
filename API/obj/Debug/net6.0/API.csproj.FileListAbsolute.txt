@@ -244,3 +244,5 @@
 /home/caesar/RiderProjects/SocialMediaApp/API/obj/Debug/net6.0/API.pdb
 /home/caesar/RiderProjects/SocialMediaApp/API/obj/Debug/net6.0/API.genruntimeconfig.cache
 /home/caesar/RiderProjects/SocialMediaApp/API/obj/Debug/net6.0/ref/API.dll
+/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

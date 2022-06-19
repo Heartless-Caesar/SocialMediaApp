@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "g6sxPfIGDpslvcV9N018HUSWTSo+1sY/xZ7mH1qg3xxq0qnqNSbPsy0Von+SaaqDeeb/U8pAjcPNiiR7YEXN8A==",
+  "dgSpecHash": "EjSEOTulavfZmzasi0qkqEpeSnCnv0bq2Wdj//dFW+QkhewGUGi2IlkiOXRlBbTP1HNUy+UbEC/Vrslrn6gZLQ==",
   "success": true,
   "projectFilePath": "/home/caesar/RiderProjects/SocialMediaApp/API/API.csproj",
   "expectedPackageFiles": [
     "/home/caesar/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/home/caesar/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.6/microsoft.aspnetcore.authentication.jwtbearer.6.0.6.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -33,8 +34,8 @@
     "/home/caesar/.nuget/packages/microsoft.identitymodel.abstractions/6.19.0/microsoft.identitymodel.abstractions.6.19.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.19.0/microsoft.identitymodel.jsonwebtokens.6.19.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.identitymodel.logging/6.19.0/microsoft.identitymodel.logging.6.19.0.nupkg.sha512",
-    "/home/caesar/.nuget/packages/microsoft.identitymodel.protocols/6.8.0/microsoft.identitymodel.protocols.6.8.0.nupkg.sha512",
-    "/home/caesar/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.8.0/microsoft.identitymodel.protocols.openidconnect.6.8.0.nupkg.sha512",
+    "/home/caesar/.nuget/packages/microsoft.identitymodel.protocols/6.10.0/microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "/home/caesar/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.10.0/microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.identitymodel.tokens/6.19.0/microsoft.identitymodel.tokens.6.19.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",

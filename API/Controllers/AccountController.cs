@@ -3,6 +3,7 @@ using System.Text;
 using API.Data;
 using API.DTOs;
 using API.Entities;
+using API.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,13 +13,15 @@ public class AccountController : BaseApiController
 {
     private readonly AppContextDb _context;
     
-    public AccountController(AppContextDb context)
+    private readonly ITokenService _tokenService;
+    public AccountController(AppContextDb context, ITokenService tokenService)
     {
         _context = context;
+        _tokenService = tokenService;
     }
 
-    [HttpPost("api/register")]
-    public async Task<ActionResult<AppUser>> Register(RegisterDTO obj)
+    [HttpPost("register")]
+    public async Task<ActionResult<UserDTO>> Register(RegisterDTO obj)
     {
         if (await UserExists(obj.Username)) return BadRequest("Username taken");
 
@@ -35,11 +38,15 @@ public class AccountController : BaseApiController
 
         await _context.SaveChangesAsync();
         
-        return user;
+        return new UserDTO
+        {
+            Username = obj.Username,
+            Token = _tokenService.CreateToken(user)
+        };
     }
 
-    [HttpPost("api/login")]
-    public async Task<ActionResult<AppUser>> Login(LoginDTO obj)
+    [HttpPost("login")]
+    public async Task<ActionResult<UserDTO>> Login(LoginDTO obj)
     {
         var user = await _context.Users.SingleOrDefaultAsync(
             c => c.Username == obj.Username.ToLower());
@@ -58,7 +65,11 @@ public class AccountController : BaseApiController
             }
         }
         
-        return user;
+        return new UserDTO
+        {
+            Username = obj.Username,
+            Token = _tokenService.CreateToken(user)
+        };;
     }
     
     [HttpGet]
