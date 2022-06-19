@@ -1,4 +1,6 @@
 using API.Data;
+using API.Interface;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,13 +12,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-/* ------------ SQLite Connection ----------------- */
+/* ---------------------------------- SQLite Connection ----------------------------------- */
 builder.Services.AddDbContext<AppContextDb>(options =>
 {
     //INSERT CONNECTION STRING AS AN ARGUMENT
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-/* ----------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+
+
+/* -------------------------- Generate JWT Tokens ----------------------------*/
+builder.Services.AddScoped<ITokenService, TokenService>();
+/* -------------------------------------------------------------------------- */
+
+
 
 /* ----- Adding a CORS Policy to be used in app.UseCors as an argument ----- */
 builder.Services.AddCors(options =>
