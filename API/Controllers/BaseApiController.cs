@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -6,5 +7,8 @@ namespace API.Controllers;
 [Route("api/[controller]")]
 public class BaseApiController : ControllerBase
 {
-    
+    public HttpResponseMessage Options()
+{
+  return new HttpResponseMessage { StatusCode = HttpStatusCode.OK };
+ }
 }
