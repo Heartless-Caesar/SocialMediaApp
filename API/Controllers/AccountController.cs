@@ -20,7 +20,7 @@ public class AccountController : BaseApiController
         _tokenService = tokenService;
     }
 
-    [HttpPost("register")]
+    [HttpPost("/api/register")]
     public async Task<ActionResult<UserDTO>> Register(RegisterDTO obj)
     {
         if (await UserExists(obj.Username)) return BadRequest("Username taken");
@@ -45,7 +45,7 @@ public class AccountController : BaseApiController
         };
     }
 
-    [HttpPost("login")]
+    [HttpPost("/api/login")]
     public async Task<ActionResult<UserDTO>> Login(LoginDTO obj)
     {
         var user = await _context.Users.SingleOrDefaultAsync(
@@ -69,7 +69,7 @@ public class AccountController : BaseApiController
         {
             Username = obj.Username,
             Token = _tokenService.CreateToken(user)
-        };;
+        };
     }
     
     [HttpGet]
