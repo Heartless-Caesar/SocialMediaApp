@@ -50,9 +50,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 /* ----- Adding a CORS Policy to be used in app.UseCors as an argument ----- */
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: "SpecificOrigins", policy =>
+    options.AddPolicy("SpecificOrigins", policy =>
         {
-            policy.WithOrigins("http://localhost:7104","http://localhost:4200");
+            policy.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
             
         });
 });
