@@ -15,7 +15,7 @@ public class UserController : BaseApiController
         _context = context;
     }
 
-    [HttpGet("/list")]
+    [HttpGet("/api/list")]
     [AllowAnonymous]
     public async Task<ActionResult<List<AppUser>>> GetUsers()
     {
