@@ -14,6 +14,7 @@ public class AccountController : BaseApiController
     private readonly AppContextDb _context;
     
     private readonly ITokenService _tokenService;
+    
     public AccountController(AppContextDb context, ITokenService tokenService)
     {
         _context = context;
