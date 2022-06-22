@@ -20,7 +20,7 @@ export class NavComponent implements OnInit {
       next: (res) => {
         console.log(res);
       },
-      error: (err) => console.log(`Error  + ${err}`),
+      error: (err) => console.log(err),
     });
   }
 
