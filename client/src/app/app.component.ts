@@ -12,29 +12,14 @@ export class AppComponent implements OnInit {
   title = 'Social Media App';
   users: any;
 
-  constructor(
-    private http: HttpClient,
-    private accountService: AccountService
-  ) {}
+  constructor(private accountService: AccountService) {}
 
   ngOnInit() {
-    this.getUsers();
     this.setCurrentUser();
   }
 
   setCurrentUser() {
     const user: User = JSON.parse(localStorage.getItem('user'));
     this.accountService.setCurrentuser(user);
-  }
-
-  getUsers() {
-    this.http.get('https://localhost:7104/api/list').subscribe({
-      next: (res) => {
-        this.users = res;
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
   }
 }
