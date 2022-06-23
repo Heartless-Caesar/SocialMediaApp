@@ -1,18 +1,28 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Social Media App</a>
+    <a class="navbar-brand" routerLink="/">Social Media App</a>
     <ul
       class="navbar-nav me-auto mb-2 mb-md-0"
       *ngIf="accountService.currentUser$ | async"
     >
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#">Home</a>
+        <a
+          class="nav-link"
+          aria-current="page"
+          routerLink="/list"
+          routerLinkActive="active"
+          >Friend list</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Connect</a>
+        <a class="nav-link" routerLink="/members" routerLinkActive="active"
+          >Connect</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link">Messages</a>
+        <a class="nav-link" routerLink="/messages" routerLinkActive="active"
+          >Messages</a
+        >
       </li>
     </ul>
     <!---------------------- DROPDOWN MENU ------------------->
