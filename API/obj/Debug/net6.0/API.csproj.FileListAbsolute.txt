@@ -246,9 +246,3 @@
 /home/caesar/RiderProjects/SocialMediaApp/API/obj/Debug/net6.0/ref/API.dll
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/System.Web.Cors.dll
-/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/System.Net.Http.Formatting.dll
-/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/System.Web.Http.dll
-/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/System.Web.Http.Cors.dll
-/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Newtonsoft.Json.dll
-/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll

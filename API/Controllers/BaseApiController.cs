@@ -7,8 +7,8 @@ namespace API.Controllers;
 [Route("/api/[controller]")]
 public class BaseApiController : ControllerBase
 { 
-    public HttpResponseMessage Options()
-    {
-      return new HttpResponseMessage { StatusCode = HttpStatusCode.OK };
-    }
+    // public HttpResponseMessage Options()
+    // {
+    //   return new HttpResponseMessage { StatusCode = HttpStatusCode.OK };
+    // }
 }
