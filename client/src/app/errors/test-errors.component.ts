@@ -8,13 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestErrorsComponent implements OnInit {
   baseUrl = 'https://localhost:7104/api/';
-
+  model = {};
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
 
   get400() {
     this.http.get(this.baseUrl + 'bad_request').subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
+  getValidationError400() {
+    this.http.post(this.baseUrl + 'register', this.model).subscribe({
       next: (res) => {
         console.log(res);
       },
