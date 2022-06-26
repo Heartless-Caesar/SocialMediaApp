@@ -15,7 +15,7 @@ public class BugController : BaseApiController
         _context = context;
     }
 
-    [HttpGet("/api/buggy")]
+    [HttpGet("/api/auth")]
     [Authorize]
     public ActionResult<string> GetSecret()
     {
