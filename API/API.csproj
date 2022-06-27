@@ -31,6 +31,8 @@
     <Compile Remove="Data\Migrations\20220618004025_UserUpdate.cs" />
     <Compile Remove="Data\Migrations\20220618004025_UserUpdate.Designer.cs" />
     <Compile Remove="Data\Migrations\AppContextDbModelSnapshot.cs" />
+    <Compile Remove="Migrations\20220618011408_FirstMigration.cs" />
+    <Compile Remove="Migrations\20220618011408_FirstMigration.Designer.cs" />
   </ItemGroup>
 
 </Project>
