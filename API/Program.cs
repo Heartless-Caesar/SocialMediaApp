@@ -59,20 +59,20 @@ var app = builder.Build();
 
 
 /* ---------- For data seed generation ------------ */
-using var scope = app.Services.CreateScope();
-var services = scope.ServiceProvider;
-try
-{
-    var context = services.GetRequiredService<AppContextDb>();
-    await context.Database.MigrateAsync();
-    await DataSeed.SeedUsers(context);
-}
-catch (Exception e)
-{
-    var logger = services.GetRequiredService<ILogger<Program>>();
-    logger.LogError(e, "Error occured during migration");
-    throw;
-}
+// using var scope = app.Services.CreateScope();
+// var services = scope.ServiceProvider;
+// try
+// {
+//     var context = services.GetRequiredService<AppContextDb>();
+//     await context.Database.MigrateAsync();
+//     await DataSeed.SeedUsers(context);
+// }
+// catch (Exception e)
+// {
+//     var logger = services.GetRequiredService<ILogger<Program>>();
+//     logger.LogError(e, "Error occured during migration");
+//     throw;
+// }
 /* ----------------------------------------------- */
 
 // Configure the HTTP request pipeline.
