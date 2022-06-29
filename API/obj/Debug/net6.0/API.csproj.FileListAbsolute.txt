@@ -247,3 +247,5 @@
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Data/UserSeedData.json
+/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/AutoMapper.dll
+/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
