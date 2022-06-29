@@ -1,5 +1,6 @@
 using System.Text;
 using API.Data;
+using API.Helpers;
 using API.Interface;
 using API.Middleware;
 using API.Services;
@@ -24,8 +25,6 @@ builder.Services.AddDbContext<AppContextDb>(options =>
 });
 /* --------------------------------------------------------------------------------------- */
 
-
-
 /* -------------------------- Generate JWT Tokens ----------------------------*/
 /*-----*/ builder.Services.AddScoped<ITokenService, TokenService>(); /*-------*/
 /* -------------------------------------------------------------------------- */
@@ -35,6 +34,10 @@ builder.Services.AddDbContext<AppContextDb>(options =>
 /*-----*/ builder.Services.AddScoped<IUserRepository, UserRepository>(); /*---*/
 /* -------------------------------------------------------------------------- */
 
+
+/* ------------------------ AutoMapper Service ------------------------------ */
+/*-*/ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly); /*-*/
+/* -------------------------------------------------------------------------- */
 
 /* -------------------------- Add Authentication -----------------------------*/
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -54,7 +57,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 
 /* ----- Adding a CORS Policy to be used in app.UseCors as an argument ----- */
-builder.Services.AddCors();
+/* ---------------- */   builder.Services.AddCors();   /* -------------------*/
 /* ------------------------------------------------------------------------- */
 
 

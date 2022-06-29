@@ -23,9 +23,9 @@ public class UserController : BaseApiController
         return Ok(await _userRepository.GetUsersAsync());
     }
     
-     [HttpGet("/api/{id}")]
-     public async Task<ActionResult<AppUser>> GetUser(int id)
+     [HttpGet("/api/{username}")]
+     public async Task<ActionResult<AppUser>> GetUser(string username)
      {
-         return await _userRepository.GetUserByIdAsync(id);
+         return await _userRepository.GetUserByUsernameAsync(username);
      }
 }

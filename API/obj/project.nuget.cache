@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "EjSEOTulavfZmzasi0qkqEpeSnCnv0bq2Wdj//dFW+QkhewGUGi2IlkiOXRlBbTP1HNUy+UbEC/Vrslrn6gZLQ==",
+  "dgSpecHash": "6+AM+KBqIHk7sdM/vOfAoX5Fl1mBkDLuTaP9Ak7VWH8VRXJYUQMhrFw6dlNAzvdDSUdVQGhSlEFyk8QUhiaOlw==",
   "success": true,
   "projectFilePath": "/home/caesar/RiderProjects/SocialMediaApp/API/API.csproj",
   "expectedPackageFiles": [
+    "/home/caesar/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
+    "/home/caesar/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.6/microsoft.aspnetcore.authentication.jwtbearer.6.0.6.nupkg.sha512",
-    "/home/caesar/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/home/caesar/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "/home/caesar/.nuget/packages/microsoft.data.sqlite.core/6.0.6/microsoft.data.sqlite.core.6.0.6.nupkg.sha512",
