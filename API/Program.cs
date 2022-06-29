@@ -27,7 +27,12 @@ builder.Services.AddDbContext<AppContextDb>(options =>
 
 
 /* -------------------------- Generate JWT Tokens ----------------------------*/
-builder.Services.AddScoped<ITokenService, TokenService>();
+/*-----*/ builder.Services.AddScoped<ITokenService, TokenService>(); /*-------*/
+/* -------------------------------------------------------------------------- */
+
+
+/* --------------------- User repository added to scope ---------------------- */
+/*-----*/ builder.Services.AddScoped<IUserRepository, UserRepository>(); /*---*/
 /* -------------------------------------------------------------------------- */
 
 
