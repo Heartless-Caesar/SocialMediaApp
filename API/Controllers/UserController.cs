@@ -23,11 +23,11 @@ public class UserController : BaseApiController
     }
 
     [HttpGet("/api/list")]
-    public async Task<ActionResult<List<MemberDTO>>> GetUsers()
+    public async Task<ActionResult<IEnumerable<MemberDTO>>> GetUsers()
     {
         var users = await _userRepository.GetMembersAsync();
         
-        return Ok(users);
+        return Ok(_mapper.Map<IEnumerable<MemberDTO>>(users));
     }
     
      [HttpGet("/api/{username}")]
