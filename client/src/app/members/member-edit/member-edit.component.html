@@ -1,1 +1,69 @@
-<h1 *ngIf="member">{{ member.username }}</h1>
+<div class="row" *ngIf="member">
+  <div class="col-4">
+    <h1>Your profile</h1>
+  </div>
+  <div class="col-8">
+    <div class="alert alert-info">
+      <p>
+        <strong>Information: </strong> You have made changes to your profile.
+        Any unsaved changes will be lost
+      </p>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <img
+        src="{{ member.photoUrl || './assets/user.png' }}"
+        alt="{{ member.knownAs }}"
+        class="card-img-top img-thumbnail"
+      />
+      <div class="card-body">
+        <div>
+          <strong>Location:</strong>
+          <p>{{ member.city }}, {{ member.country }}</p>
+        </div>
+        <div>
+          <strong>Age:</strong>
+          <p>{{ member.age }}</p>
+        </div>
+        <div>
+          <strong>Member since:</strong>
+          <p>{{ member.createdAt }}</p>
+        </div>
+        <div>
+          <strong>Last active:</strong>
+          <p>{{ member.lastLogged }}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-success btn-block">Save changes</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <tabset class="member-tabset">
+      <tab heading="About {{ member.knownAs }}" class="nav-tabs">
+        <h4>Description</h4>
+        <textarea name="introduction" rows="6"></textarea>
+        <h4>Looking for</h4>
+        <textarea name="lookingFor" rows="6"></textarea>
+        <h4>Looking for</h4>
+        <textarea name="lookingFor" rows="6"></textarea>
+      </tab>
+      <tab heading="Interests">
+        <h4>Description</h4>
+        <p>{{ member.interests }}</p>
+      </tab>
+      <tab heading="Photos">
+        <ngx-gallery
+          [options]="galleryOptions"
+          [images]="galleryImages"
+          style="display: inline-block; margin-bottom: 20px"
+        ></ngx-gallery>
+      </tab>
+      <tab heading="Messages">
+        <h4>Messages will be gere some day</h4>
+      </tab>
+    </tabset>
+  </div>
+</div>
