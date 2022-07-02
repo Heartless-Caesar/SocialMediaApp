@@ -45,7 +45,11 @@
         <p>{{ member.interests }}</p>
       </tab>
       <tab heading="Photos">
-        <h4>Photos will be here some day</h4>
+        <ngx-gallery
+          [options]="galleryOptions"
+          [images]="galleryImages"
+          style="display: inline-block; margin-bottom: 20px"
+        ></ngx-gallery>
       </tab>
       <tab heading="Messages">
         <h4>Messages will be gere some day</h4>
