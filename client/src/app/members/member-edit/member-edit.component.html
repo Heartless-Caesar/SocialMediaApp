@@ -3,11 +3,9 @@
     <h1>Your profile</h1>
   </div>
   <div class="col-8">
-    <div class="alert alert-info">
-      <p>
-        <strong>Information: </strong> You have made changes to your profile.
-        Any unsaved changes will be lost
-      </p>
+    <div class="alert alert-info" *ngIf="editForm.dirty">
+      <strong>Information: </strong> You have made changes to your profile. Any
+      unsaved changes will be lost
     </div>
   </div>
   <div class="col-4">
@@ -36,34 +34,43 @@
         </div>
       </div>
       <div class="card-footer">
-        <button class="btn btn-success btn-block">Save changes</button>
+        <button
+          form="edit-form"
+          class="btn btn-success btn-block"
+          [disabled]="!editForm.dirty"
+        >
+          Save changes
+        </button>
       </div>
     </div>
   </div>
   <div class="col-8">
     <tabset class="member-tabset">
       <tab heading="About {{ member.knownAs }}" class="nav-tabs">
-        <form>
+        <form #editForm="ngForm" id="edit-form" (ngSubmit)="updateMember()">
           <h4>Description</h4>
           <textarea
             [(ngModel)]="member.introduction"
             name="introduction"
             rows="6"
+            class="form-control"
           ></textarea>
           <h4 class="mt-2">Looking for</h4>
           <textarea
             [(ngModel)]="member.lookingFor"
             name="lookingFor"
             rows="6"
+            class="form-control"
           ></textarea>
           <h4 class="mt-2">Interests</h4>
           <textarea
             [(ngModel)]="member.interests"
             name="interests"
             rows="6"
+            class="form-control"
           ></textarea>
           <h4 class="mt-2">Location details</h4>
-          <div class="form-inline">
+          <div class="form-inline mb-3">
             <label for="city">City: </label>
             <input
               [(ngModel)]="member.city"
@@ -81,19 +88,9 @@
           </div>
         </form>
       </tab>
-      <tab heading="Interests">
-        <h4>Description</h4>
-        <p>{{ member.interests }}</p>
-      </tab>
-      <tab heading="Photos">
-        <ngx-gallery
-          [options]="galleryOptions"
-          [images]="galleryImages"
-          style="display: inline-block; margin-bottom: 20px"
-        ></ngx-gallery>
-      </tab>
-      <tab heading="Messages">
-        <h4>Messages will be gere some day</h4>
+      <tab heading="Edit Photos">
+        <h4>Edit photos</h4>
+        <p>Photo edit will be here</p>
       </tab>
     </tabset>
   </div>
