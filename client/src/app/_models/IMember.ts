@@ -7,7 +7,7 @@ export interface Member {
   dateOfBirth: string;
   photoUrl: string;
   knownAs: string;
-  created: Date;
+  createdAt: Date;
   lastActive: Date;
   introduction: string;
   lookingFor: string;
