@@ -4,6 +4,7 @@ using API.Interface;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration.EnvironmentVariables;
 
 namespace API.Controllers;
 
@@ -35,7 +36,7 @@ public class UserController : BaseApiController
          
      }
 
-     [HttpPut('/api/update')]
+     [HttpPut("/api/update")]
      public async Task<ActionResult> UpdateInfo(MemberUpdateDTO updateObj)
      {
          var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
