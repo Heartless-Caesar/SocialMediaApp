@@ -39,6 +39,11 @@ builder.Services.AddDbContext<AppContextDb>(options =>
 /*-*/ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly); /*-*/
 /* -------------------------------------------------------------------------- */
 
+/* ------------------------ Cloudinary Settings ------------------------------ */
+builder.Services.Configure<CloudinarySettings>(
+    builder.Configuration.GetSection("CloudinarySettings"));
+/* -------------------------------------------------------------------------- */
+
 /* -------------------------- Add Authentication -----------------------------*/
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
