@@ -35,7 +35,7 @@ public class UserController : BaseApiController
          
      }
 
-     [HttpPut]
+     [HttpPut('/api/update')]
      public async Task<ActionResult> UpdateInfo(MemberUpdateDTO updateObj)
      {
          var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;

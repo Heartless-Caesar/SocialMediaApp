@@ -18,4 +18,8 @@ export class MemberService {
   GetMember(username: string) {
     return this.http.get<Member>(this.baseUrl + username);
   }
+
+  UpdateMember(member: Member) {
+    return this.http.put(this.baseUrl + 'update', member);
+  }
 }
