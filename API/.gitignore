@@ -453,6 +453,7 @@ $RECYCLE.BIN/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+Properties/launchSettings.json
 Properties
 appsettings.json
 Aphrodite.db

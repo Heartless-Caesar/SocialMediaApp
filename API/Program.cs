@@ -34,6 +34,9 @@ builder.Services.AddDbContext<AppContextDb>(options =>
 /*-----*/ builder.Services.AddScoped<IUserRepository, UserRepository>(); /*---*/
 /* -------------------------------------------------------------------------- */
 
+/* --------------------- Photo service added to scope ----------------------- */
+/*-----*/ builder.Services.AddScoped<IPhotoService,PhotoService>(); /*--------*/
+/* -------------------------------------------------------------------------- */
 
 /* ------------------------ AutoMapper Service ------------------------------ */
 /*-*/ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly); /*-*/
