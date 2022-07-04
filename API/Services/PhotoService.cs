@@ -27,7 +27,7 @@ public class PhotoService : IPhotoService
 
         if (file.Length > 0)
         {
-            using var stream = file.OpenReadStream();
+            await using var stream = file.OpenReadStream();
             
             //File configuration on upload
             var uploadParams = new ImageUploadParams
@@ -39,9 +39,11 @@ public class PhotoService : IPhotoService
                     .Crop("fill")
                     .Gravity("face")
             };
+
+            uploadResult = await _cloudinary.UploadAsync(uploadParams);
         }
-        
-        throw new NotImplementedException();
+
+        return uploadResult;
     }
 
     public async Task<DeletionResult> DeletePhotoAsync(string publicId)
