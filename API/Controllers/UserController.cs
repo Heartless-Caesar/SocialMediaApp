@@ -58,30 +58,38 @@ public class UserController : BaseApiController
      [HttpPost("/api/add-photo")]
      public async Task<ActionResult<PhotoDTO>> AddPhoto(IFormFile file)
      {
+         //Gets current username due to being autorized
          var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
-
+         
+         //Adds photo to Cloudinary
          var result = await _photoService.AddPhotoAsync(file);
-
+         
+         //In case of an error while uploading to Cloudinary
          if (result.Error != null) return BadRequest(result.Error.Message);
-
+         
+         //New photo's attributes based on the uploaded photo
          var photo = new Photo
          {
              Url = result.SecureUrl.AbsoluteUri,
              Publicid = result.PublicId
          };
-
+         
+         //Sets photo as main/profile picture if there were previously no photos
          if (user.Photos.Count == 0)
          {
              photo.isMain = true;
          }
          
+         //Adds photo to the user Photo collection
          user.Photos.Add(photo);
-
+         
+         //Maps the added photo to a PhotoDTO
          if (await _userRepository.SaveAllAsync())
          {
-             return _mapper.Map<Photo, PhotoDTO>(photo);
+             return _mapper.Map<PhotoDTO>(photo);
          }
-
+         
+         //Error if something goes wrong while saving changes 
          return BadRequest("Problem adding photo");
      }
 }
