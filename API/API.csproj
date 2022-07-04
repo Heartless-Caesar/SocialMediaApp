@@ -37,4 +37,12 @@
     <Compile Remove="Migrations\20220618011408_FirstMigration.Designer.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Properties\launchSettings.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

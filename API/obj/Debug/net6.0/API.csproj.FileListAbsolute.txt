@@ -249,3 +249,6 @@
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Data/UserSeedData.json
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/AutoMapper.dll
 /home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Properties/launchSettings.json
+/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/CloudinaryDotNet.dll
+/home/caesar/RiderProjects/SocialMediaApp/API/bin/Debug/net6.0/Newtonsoft.Json.dll
