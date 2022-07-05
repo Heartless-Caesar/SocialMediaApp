@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using API.DTOs;
 using API.Entities;
 using API.Extentions;
@@ -6,7 +5,6 @@ using API.Interface;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration.EnvironmentVariables;
 
 namespace API.Controllers;
 
@@ -37,7 +35,7 @@ public class UserController : BaseApiController
         return Ok(_mapper.Map<IEnumerable<MemberDTO>>(users));
     }
     
-     [HttpGet("/api/{username}")]
+     [HttpGet("/api/{username}", Name = "GetUser")]
      //Fetches user based on their username
      public async Task<ActionResult<MemberDTO>> GetUser(string username){
          
@@ -96,7 +94,9 @@ public class UserController : BaseApiController
          //Maps the added photo to a PhotoDTO
          if (await _userRepository.SaveAllAsync())
          {
-             return _mapper.Map<PhotoDTO>(photo);
+             //Displays the route, the parameter value and the mapped photo element that was added
+             return CreatedAtRoute("GetUser", new {username = 
+                 user.Username},_mapper.Map<PhotoDTO>(photo));
          }
          
          //Error if something goes wrong while saving changes 
