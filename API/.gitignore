@@ -462,3 +462,5 @@ appsettings.json
 Aphrodite.db
 Aphrodite.db-shm
 Aphrodite.db-wal
+API/appsettings.json
+API/bin/Debug/net6.0/appsettings.json
