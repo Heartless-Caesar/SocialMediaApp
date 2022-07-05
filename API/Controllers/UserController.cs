@@ -94,7 +94,7 @@ public class UserController : BaseApiController
          //Maps the added photo to a PhotoDTO
          if (await _userRepository.SaveAllAsync())
          {
-             //Displays the route, the parameter value and the mapped photo element that was added
+             //Displays the route, the parameter value and the mapped photo
              return CreatedAtRoute("GetUser", new {username = 
                  user.Username},_mapper.Map<PhotoDTO>(photo));
          }
